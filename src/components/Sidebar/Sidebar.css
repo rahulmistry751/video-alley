@@ -1,0 +1,16 @@
+/* .list-item {
+  text-align: center;
+} */
+.sidebar {
+  height: 100vh;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  font-size: 1.2rem;
+}
+.list-item {
+  display: flex;
+  gap: 0.5rem;
+  align-items: baseline;
+}
+.active{
+  background-color: var(--primary-light);
+}
