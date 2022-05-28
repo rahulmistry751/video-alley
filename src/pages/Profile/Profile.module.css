@@ -1,0 +1,12 @@
+.profile-container{
+    display: flex;
+    justify-content: center;
+}
+.profile{
+   height:min-content;
+   min-width:12rem;
+    border:1px solid var(--font-color);
+    padding:1rem 1.2rem;
+    border-radius: 8px;
+    
+}
