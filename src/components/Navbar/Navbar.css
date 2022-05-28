@@ -1,0 +1,34 @@
+/* Header */
+
+.header {
+  margin: 0.5rem;
+  position: sticky;
+  top:0px;
+  z-index:30;
+  background-color: var(--font-color-invert);
+}
+.navbar > * {
+  margin: 0.5rem;
+}
+.navbar .button {
+  color: var(--font-color-invert);
+}
+.search-container {
+  position: relative;
+  width: 30%;
+  min-width: 18rem;
+}
+input[type="search"] {
+  height: 2.5rem;
+  padding-right: 3.5rem;
+}
+.search-icon {
+  height: 100%;
+  outline: none;
+  border: none;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  margin-left: 0.3rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
