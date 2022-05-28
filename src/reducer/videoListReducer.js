@@ -10,6 +10,7 @@ const VideoListReducer=(state,action)=>{
             return({...state,filteredVideos:getFilteredVideos(action.payload.filterCategory)})
         default:
             return(state)
+
     }
 }
 export {VideoListReducer}

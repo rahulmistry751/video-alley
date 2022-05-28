@@ -28,8 +28,6 @@ const Navbar = () => {
             </Link>):(<Link to="/login">
               <i className="fas fa-sign-in"></i>
             </Link>)
-              
-
             }
           </li>
         </ul>

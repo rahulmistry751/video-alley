@@ -8,20 +8,14 @@ import { v4 as uuid } from "uuid";
 export const categories = [
   {
     _id: uuid(),
-    categoryName: "Computer Programming",
+    categoryName: "harry potter",
     description:
-      "Computer programming is the process of designing and building an executable computer program to accomplish a specific computing",
+      "Harry Potter is a series of seven fantasy novels written by British author J. K. Rowling. ",
   },
   {
     _id: uuid(),
-    categoryName: "Frontend Development",
+    categoryName: "fantastic beasts",
     description:
-      "Front-end web development, also known as client-side development is the practice of producing HTML, CSS and JavaScript for a website or Web Application",
-  },
-  {
-    _id: uuid(),
-    categoryName: "Backend Development",
-    description:
-      "Backend Development is also known as server-side development. It is everything that the users don't see and contains behind-the-scenes activities that occur when performing any action on a website.",
+      "Professor Albus Dumbledore knows the powerful, dark wizard Gellert Grindelwald is moving to seize control of the wizarding world. ",
   },
 ];
