@@ -1,3 +1,4 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Navbar, RequiresAuth, Sidebar} from "./components";
 import {Home, Playlist,LikedVideos,WatchLater,History,Login, SignUp,Profile} from './pages'

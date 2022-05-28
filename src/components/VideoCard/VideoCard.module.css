@@ -1,0 +1,44 @@
+.card{
+    width:22rem;
+    height:20rem;
+    padding:.5rem;
+    display:block;
+    cursor:pointer;
+    position:relative;
+    box-shadow: none;
+}
+.card:hover{
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .2);
+}
+.cta-button{
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+    opacity: .2;
+    position:absolute;
+    top:1.5rem;
+    right:1.2rem;
+    padding:2px;
+}
+.cta-button:hover{
+    opacity: 1;
+    transition-duration: .5s;
+}
+.list-item{
+    background-color: var(--font-color-invert);
+    padding:8px;
+    border-radius: 50%;
+}
+.card-image-container{
+    height:70%;
+    width:100%;
+}
+.card-image-container  img{
+    height:100%;
+}
+.card-content{
+    margin-top:12px;
+}
+.card-content-header{
+    margin-bottom:6px;
+}
