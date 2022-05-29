@@ -1,0 +1,34 @@
+.auth {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card-login,
+.card-signup,
+.card-logout {
+  padding: 1.5rem;
+  width: 22.22rem;
+}
+.form-control {
+  /* background: var(--primary-light); */
+  margin: 0.3rem 0px 1rem 0px;
+}
+.secondary-action {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.secondary-action *:hover {
+  cursor: pointer;
+}
+.primary-action {
+  align-self: center;
+}
+.logout-y {
+  margin-right: 1rem;
+}
+.error{
+  color:#EF4444;
+}

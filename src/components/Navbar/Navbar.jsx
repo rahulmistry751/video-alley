@@ -1,7 +1,9 @@
 import React from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import { useAuth } from "../../context/auth-context";
 const Navbar = () => {
+  const {userToken}=useAuth();
   return (
     <header className="header">
       <nav className="navbar">
@@ -21,9 +23,12 @@ const Navbar = () => {
         </div>
         <ul className="navbar-menu">
           <li className="navbar-item">
-            <Link to="/login">
+           {userToken?(<Link to="/profile">
               <i className="fas fa-user"></i>
-            </Link>
+            </Link>):(<Link to="/login">
+              <i className="fas fa-sign-in"></i>
+            </Link>)
+            }
           </li>
         </ul>
       </nav>

@@ -5,17 +5,21 @@ import App from "./App";
 import { BrowserRouter as Router } from "react-router-dom";
 import { makeServer } from "./server";
 import { VideoContextProvider } from "./context/video-context";
+import { AuthContextProvider } from "./context/auth-context";
+import { createRoot } from "react-dom/client";
 
 // Call make Server
 makeServer();
-
-ReactDOM.render(
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
+root.render(
   <React.StrictMode>
     <Router>
+    <AuthContextProvider>
       <VideoContextProvider>
       <App />
       </VideoContextProvider>
+    </AuthContextProvider>
     </Router>
-  </React.StrictMode>,
-  document.getElementById("root")
+  </React.StrictMode>
 );

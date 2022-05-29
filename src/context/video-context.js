@@ -8,7 +8,6 @@ const VideoContext=createContext()
 
 const VideoContextProvider=({children})=>{
     const [videoState,videoListDispatch]=useReducer(VideoListReducer,{categories:[],filteredVideos:[]})
-    console.log(videoState,videoData)
     useEffect(()=>{
         (async ()=>{
             try{
@@ -25,7 +24,6 @@ const VideoContextProvider=({children})=>{
         (async ()=>{
             try{
                 const {data}=await axios.get('/api/categories');
-                console.log(data.categories)
                 videoListDispatch({type:VIDEOLISTING_ACTIONS.CATEGORIES,payload:{categories:data.categories}})
             }
             catch(error){
