@@ -23,9 +23,9 @@ const Navbar = () => {
         </div>
         <ul className="navbar-menu">
           <li className="navbar-item">
-           {userToken?(<Link to="/profile">
+           {userToken?(<Link to="/profile" title="profile">
               <i className="fas fa-user"></i>
-            </Link>):(<Link to="/login">
+            </Link>):(<Link to="/login" title="login">
               <i className="fas fa-sign-in"></i>
             </Link>)
             }
