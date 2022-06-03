@@ -2,17 +2,25 @@ import { createContext,useContext,useReducer,useEffect } from "react"
 import axios from 'axios'
 import { VideoListReducer } from "../reducer/videoListReducer";
 import { VIDEOLISTING_ACTIONS } from "../utils";
-import { getFilterCategory } from "../hooks/useFilterCategory";
 export let videoData;
+const initialState={
+    categories:[],
+    history:[],
+    playlists:[],
+    playlistVideos:[],
+    likedVideos:[],
+    watchLater:[],
+    filteredVideos:[]
+}
 const VideoContext=createContext()
 
 const VideoContextProvider=({children})=>{
-    const [videoState,videoListDispatch]=useReducer(VideoListReducer,{categories:[],filteredVideos:[]})
+    const [videoState,videoListDispatch]=useReducer(VideoListReducer,initialState)
     useEffect(()=>{
         (async ()=>{
             try{
                 const {data}=await axios.get('/api/videos');
-               videoData=data.videos;
+                videoData=data.videos;
                 videoListDispatch({type:VIDEOLISTING_ACTIONS.INITIAL_VIDEOS,payload:{initialVideos:data.videos}})
             }
             catch(error){

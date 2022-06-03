@@ -1,7 +1,8 @@
+import { Link } from 'react-router-dom';
 import style from './VideoCard.module.css';
 const VideoCard=({video})=>{
     return(
-        <div className={`card ${style.card}`} key={video._id}>
+        <Link className={`card ${style.card}`} key={video._id} to={{pathname:`/video/${video._id}`,state:{clickedVideo:video}}}>
             <div className={` ${style['card-image-container']}`}>
                 <img src={`https://img.youtube.com/vi/${video._id}/0.jpg`} alt="" />
                 <ul className={`list ${style['cta-button']}`}>
@@ -20,7 +21,7 @@ const VideoCard=({video})=>{
                 </div>
                 <small>6K views | 4 months ago</small>
             </div>
-        </div>
+        </Link>
     )
 }
 export {VideoCard}

@@ -44,7 +44,7 @@ export const videos = [
     _id: "47PHbQTmw5g",
     title: "Harry Potter and the Order of the Phoenix - Warner Bros. UK",
     description:
-      `IHarry Potter returns to Hogwarts for his fifth year--and his greatest challenge yet . . .
+      `Harry Potter returns to Hogwarts for his fifth year--and his greatest challenge yet . . .
 
       A summer has passed since Harry's encounter with the Dark Lord, and Harry returns to learn that the wizarding community remains in denial about Voldemort's return; the minister of magic believes that Headmaster Dumbledore is lying; and a new Defense Against the Dark Arts teacher has been assigned. Now, with the entire wizard community in peril, the future of magic may depend on Harry Potter and the Order of the Phoenix.
       

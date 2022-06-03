@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Navbar, RequiresAuth, Sidebar} from "./components";
-import {Home, Playlist,LikedVideos,WatchLater,History,Login, SignUp,Profile} from './pages'
+import {Home, Playlist,LikedVideos,WatchLater,History,Login, SignUp,Profile, SingleVideo} from './pages'
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
           <Route path="/login" element={<Login/>}></Route>
           <Route path="/signup" element={<SignUp/>}></Route>
           <Route path="/profile" element={<Profile/>}></Route>
+          <Route path="video/:videoId" element={<SingleVideo/>}/>
           <Route  element={<RequiresAuth/>}>
           <Route path="/playlist" element={<Playlist/>}></Route>
           <Route path="/likedvideos" element={<LikedVideos/>}></Route>

@@ -12,9 +12,6 @@ const validateForm=({email,password},setAuthError)=>{
         setAuthError("Enter valid email id");
         return false;
     }
-    
-    
-
 }
 
 export {validateForm}
