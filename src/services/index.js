@@ -1,2 +1,5 @@
 import { addToLikedVideos } from "./addToLikedVideos";
-export {addToLikedVideos};
+import {addToWatchLater} from './addToWatchLater';
+import {removeWatchLater} from './removeWatchLater';
+import {removeLikedVideos} from './removeLikedVideos';
+export {addToLikedVideos,addToWatchLater,removeWatchLater,removeLikedVideos};

@@ -29,6 +29,6 @@
 .action-btn{
     cursor:pointer;
 }
-.like{
+.like,.watchlater{
     color:var(--primary)
 }
