@@ -2,7 +2,7 @@ import { Link,useLocation,useNavigate } from 'react-router-dom';
 import style from './VideoCard.module.css';
 import {secondaryActions} from '../../utils/secondaryActions';
 import { useVideo,useAuth } from '../../context';
-import { addToWatchLater,removeWatchLater } from '../../services';
+import { watchLaterServices} from '../../services';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const VideoCard=({video})=>{
@@ -10,6 +10,7 @@ const VideoCard=({video})=>{
     const location=useLocation();
     const {videoState,videoListDispatch}=useVideo();
     const {userToken}=useAuth();
+    const {addToWatchLater,removeWatchLater }=watchLaterServices();
     const {isInWatchLater}=secondaryActions();
     const inWatchLater=isInWatchLater(video._id,videoState.watchLater)
     const watchLaterHandler=(e)=>{
