@@ -2,7 +2,6 @@ import style from './Profile.module.css';
 import { useAuth } from '../../context/auth-context';
 const Profile=()=>{
     const {userDetails,logoutHandler}=useAuth();
-    console.log(userDetails);
     return(
         <div className={`${style['profile-container']}`}>
             <div className={`${style['profile']}`}>

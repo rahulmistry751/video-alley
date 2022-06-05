@@ -42,3 +42,6 @@
 .card-content-header{
     margin-bottom:6px;
 }
+.watchlater{
+    color:var(--primary)
+}

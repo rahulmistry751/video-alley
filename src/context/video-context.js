@@ -13,7 +13,6 @@ const initialState={
     filteredVideos:[]
 }
 const VideoContext=createContext()
-
 const VideoContextProvider=({children})=>{
     const [videoState,videoListDispatch]=useReducer(VideoListReducer,initialState)
     useEffect(()=>{
