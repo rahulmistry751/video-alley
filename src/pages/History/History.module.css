@@ -1,0 +1,15 @@
+.history-videos{
+    display:grid;
+    grid-template-columns: repeat(auto-fill,minmax(22rem,1fr));
+}
+.clear-history{
+    margin-left:8px;
+    padding:1rem;
+    cursor: pointer;
+}
+.clear{
+    padding:1rem;
+}
+.clear-icon{
+    margin-right:8px;
+}
