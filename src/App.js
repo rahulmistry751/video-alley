@@ -1,9 +1,11 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import { Navbar, RequiresAuth, Sidebar} from "./components";
-import {Home, Playlist,LikedVideos,WatchLater,History,Login, SignUp,Profile, SingleVideo} from './pages'
+import { Navbar, PlaylistModal, RequiresAuth, Sidebar} from "./components";
+import { useVideo } from "./context";
+import {Home, Playlist,LikedVideos,WatchLater,History,Login, SignUp,Profile, SingleVideo, SinglePlaylistPage} from './pages'
 
 function App() {
+  const {showModal}=useVideo();
   return (
     <div className="App">
       <Navbar />
@@ -15,6 +17,7 @@ function App() {
           <Route path="/signup" element={<SignUp/>}></Route>
           <Route path="/profile" element={<Profile/>}></Route>
           <Route path="video/:videoId" element={<SingleVideo/>}/>
+          <Route path="playlist/:playlistId" element={<SinglePlaylistPage/>}/>
           <Route  element={<RequiresAuth/>}>
           <Route path="/playlist" element={<Playlist/>}></Route>
           <Route path="/likedvideos" element={<LikedVideos/>}></Route>
@@ -23,6 +26,7 @@ function App() {
           </Route>
         </Routes>
       </div>
+      {showModal.show && <PlaylistModal/>}
     </div>
   );
 }

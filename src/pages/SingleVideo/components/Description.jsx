@@ -12,7 +12,7 @@ const Description=({video})=>{
     const videoInfo=video[0];
     const location=useLocation();
     const {userToken}=useAuth();
-    const {videoState,videoListDispatch}=useVideo();
+    const {videoState,videoListDispatch,setShowModal}=useVideo();
     const navigate=useNavigate()
     const {addToHistory}=historyServices();
     const {addToLikedVideos,removeLikedVideos}=likeServices();
@@ -20,6 +20,15 @@ const Description=({video})=>{
     const {isLiked,isInWatchLater}=secondaryActions();
     const likedVideo=isLiked(videoInfo._id,videoState.likedVideos)
     const inWatchLater=isInWatchLater(videoInfo._id,videoState.watchLater)
+    const togglePlaylistModal=(e)=>{
+        e.stopPropagation();
+        if(userToken){
+            setShowModal({show:true,currentVideo:videoInfo})
+        }
+        else{
+            navigate('/login',{state:{from:location}})
+        }
+    }
     const likedHandler=()=>{
         if(userToken){
             if(likedVideo){
@@ -64,7 +73,7 @@ const Description=({video})=>{
                 <li className={`list-item ${style['action-btn']}`} title="Watch later"onClick={watchLaterHandler}>
                 <i className={`${inWatchLater?'fas':'fal'} fa-alarm-plus ${style.watchlater}`}></i>Watch Later
                 </li>
-                <li className={`list-item ${style['action-btn']}`} title="Add to playlist">
+                <li className={`list-item ${style['action-btn']}`} title="Add to playlist" onClick={(e)=>togglePlaylistModal(e)}>
                 <i className="fas fa-list"></i>Add to playlist
                 </li>
             </ul>

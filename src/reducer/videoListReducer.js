@@ -20,6 +20,10 @@ const VideoListReducer=(state,action)=>{
             return({...state,history:action.payload.historyVideo})
         case SINGLE_VIDEO_ACTIONS.CLEAR_HISTORY:
             return({...state,history:action.payload})
+        case SINGLE_VIDEO_ACTIONS.UPDATE_PLAYLIST:
+            return({...state,playlists:action.payload.playlists})
+        case SINGLE_VIDEO_ACTIONS.UPDATE_PLAYLIST_VIDEOS:
+            return({...state,playlists:action.payload.updatePlaylist})
         default:
             return(state)
 

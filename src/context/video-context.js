@@ -1,4 +1,4 @@
-import { createContext,useContext,useReducer,useEffect } from "react"
+import { createContext,useContext,useReducer,useEffect,useState } from "react"
 import axios from 'axios'
 import { VideoListReducer } from "../reducer/videoListReducer";
 import { VIDEOLISTING_ACTIONS } from "../utils";
@@ -14,7 +14,8 @@ const initialState={
 }
 const VideoContext=createContext()
 const VideoContextProvider=({children})=>{
-    const [videoState,videoListDispatch]=useReducer(VideoListReducer,initialState)
+    const [videoState,videoListDispatch]=useReducer(VideoListReducer,initialState);
+    const [showModal,setShowModal]=useState({'show':false,currentVideo:""});
     useEffect(()=>{
         (async ()=>{
             try{
@@ -40,7 +41,7 @@ const VideoContextProvider=({children})=>{
     },[])
  
     return(
-        <VideoContext.Provider value={{videoState,videoListDispatch}}>
+        <VideoContext.Provider value={{videoState,videoListDispatch,showModal,setShowModal}}>
             {children}
         </VideoContext.Provider>
     )
