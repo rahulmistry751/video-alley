@@ -17,12 +17,12 @@ function App() {
           <Route path="/signup" element={<SignUp/>}></Route>
           <Route path="/profile" element={<Profile/>}></Route>
           <Route path="video/:videoId" element={<SingleVideo/>}/>
-          <Route path="playlist/:playlistId" element={<SinglePlaylistPage/>}/>
           <Route  element={<RequiresAuth/>}>
           <Route path="/playlist" element={<Playlist/>}></Route>
           <Route path="/likedvideos" element={<LikedVideos/>}></Route>
           <Route path="/watchlater" element={<WatchLater/>}></Route>
           <Route path="/history" element={<History/>}></Route>
+          <Route path="playlist/:playlistId" element={<SinglePlaylistPage/>}/>
           </Route>
         </Routes>
       </div>

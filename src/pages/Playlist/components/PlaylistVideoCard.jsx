@@ -13,7 +13,7 @@ const PlaylistVideocard=({video,playlist})=>{
     return(
         <div className={`card ${style['playlist-video']}`} key={video._id} onClick={()=>navigate(`/video/${video._id}`)}>
         <div className={` ${style['card-image-container']}`}>
-            <img src={`https://img.youtube.com/vi/${video._id}/0.jpg`} alt="" />
+            <img src={`https://img.youtube.com/vi/${video._id}/0.jpg`} alt="thumbnail" />
             <ul className={`list ${style['cta-button']}`}>
                     <li title="remove from playlist" className={`list-item ${style['list-item']}`} onClick={(e)=>removeVideoFromPlaylistHandler(e)}>
                         <i className={`fas fa-trash-alt ${style.remove}`}></i>
