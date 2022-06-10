@@ -1,0 +1,34 @@
+.playlist-modal-container{
+    top:0;
+    z-index:31;
+    width:100%;
+}
+.playlist-modal{
+    width:16rem;
+    padding:1rem;
+    
+}
+.save-to-heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom:8px;
+}
+.create-action{
+    margin: 8px 0;
+}
+.playlist-input{
+    width: 100%;
+    outline: none;
+    padding:8px;
+    border:none;
+}
+.playlist-check{
+    margin-right:8px;
+}
+.playlist{
+    padding:8px;
+}
+.close-modal{
+    cursor: pointer;
+}

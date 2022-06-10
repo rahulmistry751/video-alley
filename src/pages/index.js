@@ -7,4 +7,5 @@ import {Login} from './Auth/Login/Login';
 import {SignUp} from './Auth/SignUp/SignUp';
 import {Profile} from './Profile/Profile';
 import { SingleVideo } from './SingleVideo/SingleVideo';
-export {Home,Playlist,LikedVideos,WatchLater,History,Login,SignUp,Profile,SingleVideo};
+import { SinglePlaylistPage } from './Playlist/SinglePlaylistPage';
+export {Home,Playlist,LikedVideos,WatchLater,History,Login,SignUp,Profile,SingleVideo,SinglePlaylistPage};

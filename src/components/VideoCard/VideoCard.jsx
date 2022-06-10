@@ -8,11 +8,22 @@ import 'react-toastify/dist/ReactToastify.css';
 const VideoCard=({video})=>{
     const navigate=useNavigate();
     const location=useLocation();
-    const {videoState,videoListDispatch}=useVideo();
+    const {videoState,videoListDispatch,showModal,setShowModal}=useVideo();
     const {userToken}=useAuth();
     const {addToWatchLater,removeWatchLater }=watchLaterServices();
     const {isInWatchLater}=secondaryActions();
     const inWatchLater=isInWatchLater(video._id,videoState.watchLater)
+    const togglePlaylistModal=(e)=>{
+        e.stopPropagation();
+        if(userToken){
+            setShowModal(prev=>{
+                return {show:true,currentVideo:video}
+            })
+        }
+        else{
+            navigate('/login',{state:{from:location}})
+        }
+    }
     const watchLaterHandler=(e)=>{
         e.stopPropagation();
         if(userToken){
@@ -36,7 +47,7 @@ const VideoCard=({video})=>{
                     <li title="watch later" className={`list-item ${style['list-item']}`} onClick={(e)=>watchLaterHandler(e)}>
                         <i className={`${inWatchLater?'fas':'fal'} fa-alarm-plus ${style.watchlater}`}></i>
                     </li>
-                    <li title="add to playlist" className={`list-item ${style['list-item']}`}>
+                    <li title="add to playlist" className={`list-item ${style['list-item']}`} onClick={togglePlaylistModal}>
                         <i className="fas fa-list"></i>
                     </li>
 

@@ -1,9 +1,3 @@
-.videolisting-container{
-    /* display:flex; */
-   /* align-items: flex-start; */
-   
-
-}
 .videolist{
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(22rem,1fr));
@@ -15,7 +9,6 @@
 }
 .category-chip{
     font-size:1.1rem;
-    /* border:1px solid grey; */
     border: none;
     border-radius: 8px;
     margin:0 .8rem;
