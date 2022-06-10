@@ -1,7 +1,7 @@
 
 # [VideoAlley](https://videoalley.netlify.app/)
 
-### A e-commerce web-app, best alley for a bibliophile
+### A video library for potterheads
 
 ## Features
 - [Home](https://videoalley.netlify.app/)
