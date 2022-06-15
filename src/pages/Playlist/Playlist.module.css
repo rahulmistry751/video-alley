@@ -11,6 +11,7 @@
     position:relative;
     box-shadow: none;
     border-radius:5px;
+    margin:1rem;
 }
 .playlist-cover-container{
     height:18rem;
