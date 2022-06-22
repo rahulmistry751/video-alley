@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import {useAuth, useVideo} from '../../context';
 import {VideoCard} from '../../components';
 import style from './History.module.css';
@@ -7,6 +8,9 @@ const History=()=>{
     const {videoState,videoListDispatch}=useVideo();
     const {userToken}=useAuth();
     const {clearHistory}=historyServices();
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
     return (
         <div className={`${style["history-container"]}`}>
             <div className={`${style["clear-history"]}`}>
