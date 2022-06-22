@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { ToastContainer } from "react-toastify";
 import { useVideo } from "../../context"
 import { PlaylistCover } from "./components/PlaylistCover"
@@ -5,6 +6,9 @@ import style from './Playlist.module.css';
 const Playlist=()=>{
     const {videoState}=useVideo();
     const {playlists}=videoState;
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
     return(
         <div className={`${style["playlist-container"]}`}>
             {playlists.length?

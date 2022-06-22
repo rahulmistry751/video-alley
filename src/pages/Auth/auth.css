@@ -12,7 +12,7 @@
   width: 22.22rem;
 }
 .form-control {
-  /* background: var(--primary-light); */
+  border: 1px solid var(--gray-light);
   margin: 0.3rem 0px 1rem 0px;
 }
 .secondary-action {
@@ -31,4 +31,7 @@
 }
 .error{
   color:#EF4444;
+}
+.checkbox-terms{
+  margin-right:4px;
 }

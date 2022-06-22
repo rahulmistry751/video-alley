@@ -3,10 +3,16 @@
     justify-content: center;
 }
 .profile{
-   height:min-content;
-   min-width:12rem;
-    border:1px solid var(--font-color);
+    height:min-content;
+    width:16%;
+    min-width:14rem;
     padding:1rem 1.2rem;
     border-radius: 8px;
-    
+    box-shadow: 0 0 8px rgba(0, 0, 0, .2);
+}
+.user-name{
+    font-size:1.5rem;
+}
+.user-email{
+    font-size:1rem;
 }

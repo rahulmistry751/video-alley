@@ -1,9 +1,13 @@
+import { useEffect } from "react";
 import { ToastContainer } from "react-toastify";
 import { VideoCard } from "../../components";
 import { useVideo } from "../../context/video-context";
 import style from './Watchlater.module.css';
 const WatchLater=()=>{
     const {videoState}=useVideo();
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
     return (
         <div className={`${style["watchlater-container"]}`}>
             {

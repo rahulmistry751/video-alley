@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ReactPlayer from "react-player/youtube";
 import { Description } from "./components/Description";
@@ -6,6 +7,9 @@ import style from './SingleVideo.module.css';
 const SingleVideo=()=>{
     const {videoId}=useParams();
     const video=videoData.filter(video=>video._id===videoId);
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
     return(
         <div className={`${style['singlevideo-container']}`}>
             <div className={`${style['videoplayer-container']}`}>
